@@ -35,7 +35,10 @@ contexts:
 
   built_in_subs:
     # 5/18/18: needs to be expanded upon quite a bit...
-    - match: \b(say|print|uc|chars|flip|numerator|denominator|nude|is-prime|WHAT|slurp|IO|lines|mkdir|rmdir|e|map|reverse|sort|unique|return)\b
+    - match: \b(say|print|uc|chars|flip|numerator
+        |denominator|nude|is-prime|WHAT|slurp
+        |IO|lines|mkdir|rmdir|e|map|reverse
+        |sort|unique|return)\b
       scope: support.function.perl6
 
   vars:
