@@ -21,6 +21,7 @@ contexts:
     - include: single_qoute_strings
     - include: built_in_consts
     - include: vars
+    - include: storage_types
     - include: built_in_subs
 
   keywords:
@@ -34,7 +35,7 @@ contexts:
 
   built_in_subs:
     # 5/18/18: needs to be expanded upon quite a bit...
-    - match: \b(say|print|uc|chars|flip|numerator|denominator|nude|is-prime)\b
+    - match: \b(say|print|uc|chars|flip|numerator|denominator|nude|is-prime|WHAT|slurp|IO|lines|mkdir|rmdir|e|map|reverse|sort|unique|return)\b
       scope: support.function.perl6
 
   vars:
@@ -44,12 +45,16 @@ contexts:
       scope: variable.other
 
   numbers:
-    - match: '\b(-)?[0-9]\.?[0-9]?+\b'
+    - match: '\b(\-)?[0-9]*\.?[0-9]+\b'
       scope: constant.numeric.perl6
 
   built_in_consts:
-    - match: '\b(True|False)\b'
+    - match: '\b(True|False|Nil)\b'
       scope: constant.language.perl6
+
+  storage_types:
+    - match: '\b(Mu|Any|Cool|Str|Int|Rat|Bool)\b'
+      scope: storage.type.perl6
 
   char_escapes:
     - match: '\\.'
