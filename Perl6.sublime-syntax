@@ -30,7 +30,8 @@ contexts:
     # strings in YAML. When using single quoted strings, only single quotes
     # need to be escaped: this is done by using two single quotes next to each
     # other.
-    - match: '\b(if|else|for|loop|my|do)\b'
+    - match: '\b(if|elsif|else|unless|with|for
+        |given|when|default|loop|my|do)\b'
       scope: keyword.control.perl6
 
   built_in_subs:
@@ -38,14 +39,15 @@ contexts:
     - match: \b(say|print|uc|chars|flip|numerator
         |denominator|nude|is-prime|WHAT|slurp
         |IO|lines|mkdir|rmdir|e|map|reverse
-        |sort|unique|return)\b
+        |sort|unique|return|kv|keys|values
+        |push|prompt|run|shell|spurt|dir)\b
       scope: support.function.perl6
 
   vars:
     - match: '(\$|@|%)\S+?.\b'
       captures:
         1: punctuation.definition.variable
-      scope: variable.other
+      scope: variable.other.perl6
 
   numbers:
     - match: '\b(\-)?[0-9]*\.?[0-9]+\b'
@@ -58,6 +60,16 @@ contexts:
   storage_types:
     - match: '\b(Mu|Any|Cool|Str|Int|Rat|Bool)\b'
       scope: storage.type.perl6
+    - match: '\b(sub|multi)\b ([A-Za-z0-9_-]+)'
+      scope: storage.type.perl6
+      captures:
+        1: meta.function.perl6
+        2: entity.name.function.perl6
+    - match: '\b(class)\b ([A-Za-z0-9_-]+)'
+      scope: storage.type.perl6
+      captures:
+        1: meta.class.perl6
+        2: entity.name.class.perl6
 
   char_escapes:
     - match: '\\.'
