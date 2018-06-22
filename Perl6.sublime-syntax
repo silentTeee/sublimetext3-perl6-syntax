@@ -30,17 +30,17 @@ contexts:
     # strings in YAML. When using single quoted strings, only single quotes
     # need to be escaped: this is done by using two single quotes next to each
     # other.
-    - match: '\b(if|elsif|else|unless|with|for
-        |given|when|default|loop|my|do)\b'
+    - match: '\b(if|elsif|else|unless|with|for|
+        given|when|default|loop|my|do)\b'
       scope: keyword.control.perl6
 
   built_in_subs:
     # 5/18/18: needs to be expanded upon quite a bit...
-    - match: \b(say|print|uc|chars|flip|numerator
-        |denominator|nude|is-prime|WHAT|slurp
-        |IO|lines|mkdir|rmdir|e|map|reverse
-        |sort|unique|return|kv|keys|values
-        |push|prompt|run|shell|spurt|dir)\b
+    - match: '\b(say|print|uc|chars|flip|numerator|
+        denominator|nude|is-prime|WHAT|slurp|
+        IO|lines|mkdir|rmdir|e|map|reverse|
+        sort|unique|return|kv|keys|values|
+        push|prompt|run|shell|spurt|dir)\b'
       scope: support.function.perl6
 
   vars:
