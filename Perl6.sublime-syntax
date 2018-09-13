@@ -31,16 +31,16 @@ contexts:
     # need to be escaped: this is done by using two single quotes next to each
     # other.
     - match: '\b(if|elsif|else|unless|with|for|
-        given|when|default|loop|my|do)\b'
+        given|when|default|loop|my|do|while)\b'
       scope: keyword.control.perl6
 
   built_in_subs:
     # 5/18/18: needs to be expanded upon quite a bit...
     - match: '\b(say|print|uc|chars|flip|numerator|
-        denominator|nude|is-prime|WHAT|slurp|
-        IO|lines|mkdir|rmdir|e|map|reverse|
-        sort|unique|return|kv|keys|values|
-        push|prompt|run|shell|spurt|dir)\b'
+        denominator|nude|is-prime|WHAT|slurp|warn|
+        IO|lines|mkdir|rmdir|e|map|reverse|exit|
+        sort|unique|return|kv|keys|values|open|get|
+        push|prompt|run|shell|spurt|dir|die|defined)\b'
       scope: support.function.perl6
 
   vars:
