@@ -31,7 +31,7 @@ contexts:
     # need to be escaped: this is done by using two single quotes next to each
     # other.
     - match: '\b(if|elsif|else|unless|with|for|
-        given|when|default|loop|my|do|while)\b'
+        given|when|default|loop|my|do|while|return)\b'
       scope: keyword.control.perl6
 
   built_in_subs:
@@ -39,7 +39,7 @@ contexts:
     - match: '\b(say|print|uc|chars|flip|numerator|
         denominator|nude|is-prime|WHAT|slurp|warn|
         IO|lines|mkdir|rmdir|e|map|reverse|exit|
-        sort|unique|return|kv|keys|values|open|get|
+        sort|unique|kv|keys|values|open|get|
         push|prompt|run|shell|spurt|dir|die|defined)\b'
       scope: support.function.perl6
 
