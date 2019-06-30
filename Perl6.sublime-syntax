@@ -31,7 +31,8 @@ contexts:
     # need to be escaped: this is done by using two single quotes next to each
     # other.
     - match: '\b(if|elsif|else|unless|with|for|
-        given|when|default|loop|my|do|while|return)\b'
+        given|when|default|loop|my|do|while|return|
+        returns|repeat|until|orwith|without)\b'
       scope: keyword.control.perl6
 
   built_in_subs:
@@ -51,6 +52,8 @@ contexts:
 
   numbers:
     - match: '\b(\-)?[0-9]*\.?[0-9]+\b'
+      scope: constant.numeric.perl6
+    - match: '\b0x[0-9a-fA-F_]+\b'
       scope: constant.numeric.perl6
 
   built_in_consts:
@@ -100,7 +103,7 @@ contexts:
         - match: ''''
           scope: punctuation.definition.string.end.perl6
           pop: true
-    
+
 
   line_comments:
     # line_comments begin with a '#' and finish at the end of the line.
