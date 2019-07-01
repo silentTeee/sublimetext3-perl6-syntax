@@ -49,6 +49,8 @@ contexts:
       scope: constant.numeric.perl6
     - match: '\b0x[0-9a-fA-F_]+\b'
       scope: constant.numeric.perl6
+    - match: '\b0b[0-1_]+\b'
+      scope: constant.numeric.perl6
 
   built_in_consts:
     - match: '\b(True|False|Nil)\b'
