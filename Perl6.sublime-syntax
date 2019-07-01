@@ -30,18 +30,12 @@ contexts:
     # strings in YAML. When using single quoted strings, only single quotes
     # need to be escaped: this is done by using two single quotes next to each
     # other.
-    - match: '\b(if|elsif|else|unless|with|for|
-        given|when|default|loop|my|do|while|return|
-        returns|repeat|until|orwith|without)\b'
+    - match: '\b(if|elsif|else|unless|with|for|given|when|default|loop|my|do|while|return|returns|repeat|until|orwith|without)\b'
       scope: keyword.control.perl6
 
   built_in_subs:
     # 5/18/18: needs to be expanded upon quite a bit...
-    - match: '\b(say|print|uc|chars|flip|numerator|
-        denominator|nude|is-prime|WHAT|slurp|warn|
-        IO|lines|mkdir|rmdir|e|map|reverse|exit|
-        sort|unique|kv|keys|values|open|get|
-        push|prompt|run|shell|spurt|dir|die|defined)\b'
+    - match: '\b(say|print|uc|chars|flip|numerator|denominator|nude|is-prime|WHAT|slurp|warn|IO|lines|mkdir|rmdir|e|map|reverse|exit|sort|unique|kv|keys|values|open|get|push|prompt|run|shell|spurt|dir|die|defined)\b'
       scope: support.function.perl6
 
   vars:
@@ -61,8 +55,7 @@ contexts:
       scope: constant.language.perl6
 
   storage_types:
-    - match: '\b(Mu|Any|Cool|Str|Int|Rat|Bool|u?int8|
-      u?int16|u?int32|u?int64|byte|num32|num64)\b'
+    - match: '\b(Mu|Any|Cool|Str|Int|Rat|Bool|u?int8|u?int16|u?int32|u?int64|byte|num32|num64)\b'
       scope: storage.type.perl6
     - match: '\b(sub|multi)\b ([A-Za-z0-9_-]+)'
       scope: storage.type.perl6
