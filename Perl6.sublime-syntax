@@ -140,3 +140,17 @@ contexts:
         - meta_scope: comment.block.perl6
         - match: '\]'
           pop: true
+    - match: '#`\{'
+      scope: punctuation.definition.comment.perl6
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_scope: comment.block.perl6
+        - match: '\}'
+          pop: true
+    - match: '#`\<'
+      scope: punctuation.definition.comment.perl6
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_scope: comment.block.perl6
+        - match: '\>'
+          pop: true
