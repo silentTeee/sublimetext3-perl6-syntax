@@ -132,6 +132,7 @@ contexts:
         # This is an anonymous context push for brevity.
         - meta_include_prototype: false
         - meta_scope: comment.block.perl6
+        - include: matching_parentheses
         - match: '\)'
           pop: true
     - match: '#`\['
@@ -140,6 +141,7 @@ contexts:
         # This is an anonymous context push for brevity.
         - meta_include_prototype: false
         - meta_scope: comment.block.perl6
+        - include: matching_square_brackets
         - match: '\]'
           pop: true
     - match: '#`\{'
@@ -148,6 +150,7 @@ contexts:
         # This is an anonymous context push for brevity.
         - meta_include_prototype: false
         - meta_scope: comment.block.perl6
+        - include: matching_curly_brackets
         - match: '\}'
           pop: true
     - match: '#`\<'
@@ -156,5 +159,42 @@ contexts:
         # This is an anonymous context push for brevity.
         - meta_include_prototype: false
         - meta_scope: comment.block.perl6
+        - include: matching_angle_brackets
+        - match: '\>'
+          pop: true
+
+  matching_parentheses:
+    - match: '\('
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
+        - include: matching_parentheses
+        - match: '\)'
+          pop: true
+
+  matching_square_brackets:
+    - match: '\['
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
+        - include: matching_square_brackets
+        - match: '\]'
+          pop: true
+
+  matching_curly_brackets:
+    - match: '\{'
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
+        - include: matching_curly_brackets
+        - match: '\}'
+          pop: true
+
+  matching_angle_brackets:
+    - match: '\<'
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
+        - include: matching_angle_brackets
         - match: '\>'
           pop: true
