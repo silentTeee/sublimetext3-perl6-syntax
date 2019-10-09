@@ -130,6 +130,7 @@ contexts:
       scope: punctuation.definition.comment.perl6
       push:
         # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
         - meta_scope: comment.block.perl6
         - match: '\)'
           pop: true
@@ -137,6 +138,7 @@ contexts:
       scope: punctuation.definition.comment.perl6
       push:
         # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
         - meta_scope: comment.block.perl6
         - match: '\]'
           pop: true
@@ -144,6 +146,7 @@ contexts:
       scope: punctuation.definition.comment.perl6
       push:
         # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
         - meta_scope: comment.block.perl6
         - match: '\}'
           pop: true
@@ -151,6 +154,7 @@ contexts:
       scope: punctuation.definition.comment.perl6
       push:
         # This is an anonymous context push for brevity.
+        - meta_include_prototype: false
         - meta_scope: comment.block.perl6
         - match: '\>'
           pop: true
