@@ -15,6 +15,7 @@ contexts:
   main:
     # The main context is the initial starting point of our syntax.
     # Include other contexts from here (or specify them directly).
+    - include: regex
     - include: keywords
     - include: numbers
     - include: double_quote_strings
@@ -43,6 +44,10 @@ contexts:
       captures:
         1: punctuation.definition.variable
       scope: variable.other.perl6
+
+  regex:
+    - match: '(m|rx|)\/.+\/'
+      scope: string.regexp.perl6
 
   numbers:
     - match: '\b(\-)?[0-9]*\.?[0-9]+\b'
