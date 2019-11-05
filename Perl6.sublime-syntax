@@ -46,8 +46,13 @@ contexts:
       scope: variable.other.perl6
 
   regex:
-    - match: '(m|rx|)\/.+\/'
+    - match: '(m|rx|)\/'
       scope: string.regexp.perl6
+      push:
+        - meta_scope: string.regexp.perl6
+        - match: '/'
+          scope: string.regexp.perl6
+          pop: true
 
   numbers:
     - match: '\b(\-)?[0-9]*\.?[0-9]+\b'
