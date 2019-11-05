@@ -76,7 +76,7 @@ contexts:
       captures:
         1: meta.function.perl6
         2: entity.name.function.perl6
-    - match: '\b(class)\b ([A-Za-z0-9_-]+)'
+    - match: '\b(class)\b ([A-Za-z0-9-_:]+)'
       scope: storage.type.perl6
       captures:
         1: meta.class.perl6
