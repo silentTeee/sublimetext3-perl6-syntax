@@ -178,6 +178,7 @@ contexts:
         - match: '\>'
           pop: true
 
+#These contexts are pretty much exclusively for nested brackets in comments 
   matching_parentheses:
     - match: '\('
       push:
