@@ -69,7 +69,7 @@ contexts:
       scope: constant.language.perl6
 
   storage_types:
-    - match: '\b(Mu|Any|Cool|Str|Int|Rat|Bool|u?int8|u?int16|u?int32|u?int64|byte|num32|num64|token|regex|rule)\b'
+    - match: '\b(Mu|Any|Cool|Str|Int|Rat|Bool|Sub|u?int8|u?int16|u?int32|u?int64|byte|num32|num64|token|regex|rule)\b'
       scope: storage.type.perl6
     - match: '\b(sub|multi|submethod|method)\b ([A-Za-z0-9_-]+)'
       scope: storage.type.perl6
